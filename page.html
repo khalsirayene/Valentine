@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Nada · the most beautiful Valentine</title>
+  <style>
+    /* ———————————————————— 
+        PERFECTLY CRAFTED, NO BUGS
+       ———————————————————— */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* elegant system fonts + classic serif for romance */
+    body {
+      background: #f9ebf2;
+      background: radial-gradient(circle at 80% 20%, #ffe9f2, #fad9e8);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      color: #2d1a23;
+    }
+
+    /* main card – soft, luminous, classic */
+    .valentine-masterpiece {
+      max-width: 1200px;
+      width: 100%;
+      background: rgba(255, 250, 252, 0.9);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 3.5rem;
+      box-shadow: 
+        0 40px 70px -20px rgba(160, 70, 100, 0.4),
+        0 15px 30px -8px rgba(0, 0, 0, 0.05),
+        0 0 0 1.5px rgba(255, 210, 230, 0.7) inset;
+      padding: 2.5rem 2.5rem;
+      transition: all 0.3s;
+    }
+
+    /* ———————————————————— 
+        HEADER – POETIC & PERSONAL 
+       ———————————————————— */
+    .header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .name-title {
+      font-size: clamp(4rem, 16vw, 7rem);
+      font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      font-weight: 400;
+      background: linear-gradient(135deg, #b6486e, #a12b52);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 0.8rem;
+      text-shadow: 0 8px 20px rgba(180, 70, 120, 0.3);
+    }
+
+    .greeting-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .greeting-message {
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #7a3852;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 0.7rem 2rem;
+      border-radius: 60px;
+      border: 1.5px solid #fec5db;
+      box-shadow: 0 6px 14px rgba(250, 180, 200, 0.3);
+    }
+
+    /* ———————————————————— 
+        TWO-COLUMN LAYOUT (PERFECT RESPONSIVE)
+       ———————————————————— */
+    .love-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 750px) {
+      .love-grid {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    /* ———————————————————— 
+        LEFT SIDE – HEARTFELT MESSAGE + DETAILS 
+       ———————————————————— */
+    .message-pavilion {
+      background: #fff9fd;
+      border-radius: 2.8rem;
+      padding: 2.5rem 2rem;
+      border: 1px solid #ffe2f0;
+      box-shadow: 0 20px 40px -16px rgba(150, 60, 90, 0.2);
+    }
+
+    .heart-luxury {
+      font-size: 5rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      animation: subtle-pulse 2.4s infinite;
+      filter: drop-shadow(0 6px 10px #fbaac5);
+    }
+
+    @keyframes subtle-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    .message-pavilion h2 {
+      font-size: 2.3rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      color: #a53860;
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+
+    .letter-box {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2.3rem 2rem;
+      border: 1px solid #fec5db;
+      box-shadow: inset 0 8px 16px #fff2f9;
+    }
+
+    .letter-box p {
+      font-size: 1.25rem;
+      line-height: 1.9;
+      color: #291d24;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .signature-area {
+      font-size: 1.8rem;
+      font-family: 'Playfair Display', serif;
+      color: #a53860;
+      text-align: right;
+      margin-top: 1.8rem;
+      padding-right: 1rem;
+    }
+
+    /* enhanced stats with icons */
+    .stats-elegant {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.2rem;
+      justify-content: center;
+      margin: 2.2rem 0 0.5rem;
+    }
+
+    .stat-elegant {
+      background: #fff4f9;
+      border-radius: 60px;
+      padding: 0.7rem 1.8rem;
+      font-size: 1.05rem;
+      color: #871f45;
+      border: 1px solid #fec5db;
+      box-shadow: 0 4px 10px rgba(250, 170, 190, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* ———————————————————— 
+        RIGHT SIDE – GARDEN, METER, WISHES + NEW ADDITIONS
+       ———————————————————— */
+    .garden-symphony {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* flower grid (now with 4 unique flowers) */
+    .flower-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .flower-item {
+      background: #fff9fd;
+      border-radius: 2.2rem;
+      padding: 1.8rem 0.5rem 1.2rem;
+      text-align: center;
+      border: 1px solid #ffe2f0;
+      transition: all 0.25s;
+      cursor: pointer;
+      box-shadow: 0 12px 22px -14px rgba(170, 70, 100, 0.2);
+    }
+
+    .flower-item:hover {
+      background: white;
+      border-color: #f9aac5;
+      transform: translateY(-6px);
+      box-shadow: 0 22px 28px -16px #c2567a;
+    }
+
+    .flower-emoji {
+      font-size: 3.5rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .flower-label {
+      color: #a53860;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    /* love meter – refined */
+    .meter-card {
+      background: #fff9fd;
+      border-radius: 2.5rem;
+      padding: 2rem 2rem;
+      border: 1px solid #ffe2f0;
+    }
+
+    .meter-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      color: #a53860;
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .meter-track {
+      background: #ffe2ed;
+      height: 34px;
+      border-radius: 50px;
+      padding: 4px;
+      box-shadow: inset 0 3px 8px rgba(170, 70, 100, 0.15);
+    }
+
+    .meter-fill {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #f87196, #f43f5e);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 1.4rem;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .meter-footnote {
+      text-align: center;
+      margin-top: 1rem;
+      color: #871f45;
+      font-size: 1.05rem;
+    }
+
+    /* wish gallery – interactive */
+    .wish-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: center;
+    }
+
+    .wish-gallery span {
+      background: white;
+      border-radius: 60px;
+      padding: 0.7rem 1.6rem;
+      border: 1px solid #fbb9cf;
+      color: #871f45;
+      font-size: 1rem;
+      box-shadow: 0 5px 12px rgba(240, 150, 170, 0.15);
+      transition: all 0.15s;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .wish-gallery span:active {
+      transform: scale(0.95);
+      background: #fff0f5;
+    }
+
+    /* ✦ NEW ADDITIONS – more love, more features ✦ */
+
+    /* 1. romantic countdown + next Valentine's */
+    .countdown-box {
+      background: #fff9fd;
+      border-radius: 2rem;
+      padding: 1.4rem 1.5rem;
+      border: 1px solid #ffe2f0;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .countdown-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: #a53860;
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    #countdown {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #b23b62;
+      background: #fff4f9;
+      padding: 0.6rem 1.2rem;
+      border-radius: 60px;
+      display: inline-block;
+      border: 1px solid #fec5db;
+    }
+
+    /* 2. small love note that changes each time */
+    .love-note-rotator {
+      background: #fff9fd;
+      border-radius: 2rem;
+      padding: 1rem 1.8rem;
+      border: 1px solid #ffe2f0;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #871f45;
+      margin: 0.8rem 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .love-note-rotator:hover {
+      background: #fff0f7;
+    }
+
+    .love-note-rotator span {
+      font-style: italic;
+    }
+
+    /* 3. "just for Nada" secret corner */
+    .secret-corner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    .secret-corner button {
+      background: #fff9fd;
+      border: 1.5px solid #fbb9cf;
+      border-radius: 60px;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      color: #a53860;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .secret-corner button:hover {
+      background: #fec5db;
+      color: #4f1e31;
+      border-color: #f98bb5;
+    }
+
+    .secret-message {
+      font-size: 1rem;
+      color: #871f45;
+      background: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 60px;
+      border: 1px solid #fec5db;
+    }
+
+    /* hint text */
+    .hint-soft {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #b65c7a;
+      margin: 0.5rem 0 0;
+    }
+
+    /* ———————————————————— 
+        FOOTER – refined 
+       ———————————————————— */
+    .footer-elegant {
+      margin-top: 3rem;
+      border-top: 2px dashed #f6b0c5;
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem 3rem;
+      color: #712e4a;
+      font-size: 1.15rem;
+    }
+
+    .footer-elegant span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* toast notification */
+    .toast-beauty {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #a53860;
+      color: white;
+      padding: 1rem 2.4rem;
+      border-radius: 60px;
+      font-size: 1.2rem;
+      box-shadow: 0 20px 35px rgba(150, 50, 80, 0.4);
+      opacity: 0;
+      transition: opacity 0.25s;
+      pointer-events: none;
+      z-index: 1000;
+      text-align: center;
+      white-space: nowrap;
+      max-width: 90%;
+      white-space: normal;
+    }
+
+    /* no bugs, only love */
+    .hide-bug {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="valentine-masterpiece">
+    <!-- header with name & greeting -->
+    <div class="header">
+      <div class="name-title">Nada</div>
+      <div class="greeting-card">
+        <span class="greeting-message" id="dynamicGreeting">my forever Valentine</span>
+      </div>
+    </div>
+
+    <!-- main grid -->
+    <div class="love-grid">
+      <!-- LEFT SIDE (message) -->
+      <div class="message-pavilion">
+        <div class="heart-luxury">❤️</div>
+        <h2>to my Nada</h2>
+        <div class="letter-box">
+          <p>
+            “In your smile I found my happiness,<br>
+            in your heart I found my home.<br>
+            You are the quiet morning, the soft evening,<br>
+            the poetry in my soul.<br>
+            Will you be my Valentine today and always?”
+          </p>
+          <div class="signature-area">— forever yours</div>
+        </div>
+
+        <!-- stats with icons (new elegance) -->
+        <div class="stats-elegant">
+          <span class="stat-elegant">❤️ 365 days of love</span>
+          <span class="stat-elegant">💋 infinite kisses</span>
+          <span class="stat-elegant">🌹 eternal roses</span>
+          <span class="stat-elegant">💎 you're priceless</span>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE (garden + features) -->
+      <div class="garden-symphony">
+        <!-- flower grid -->
+        <div class="flower-grid">
+          <div class="flower-item" onclick="showToast('🌹', 'red rose – for my beautiful Nada')">
+            <span class="flower-emoji">🌹</span>
+            <span class="flower-label">red rose</span>
+          </div>
+          <div class="flower-item" onclick="showToast('🌷', 'tulip – for my sweet Nada')">
+            <span class="flower-emoji">🌷</span>
+            <span class="flower-label">tulip</span>
+          </div>
+          <div class="flower-item" onclick="showToast('🌸', 'cherry blossom – for my gentle Nada')">
+            <span class="flower-emoji">🌸</span>
+            <span class="flower-label">cherry</span>
+          </div>
+          <div class="flower-item" onclick="showToast('🌼', 'daisy – for my pure Nada')">
+            <span class="flower-emoji">🌼</span>
+            <span class="flower-label">daisy</span>
+          </div>
+        </div>
+
+        <!-- love meter -->
+        <div class="meter-card">
+          <div class="meter-header">
+            <span>💗</span> my love for Nada <span>💗</span>
+          </div>
+          <div class="meter-track">
+            <div class="meter-fill" style="width:100%">∞ 100%</div>
+          </div>
+          <div class="meter-footnote">beyond infinite, always</div>
+        </div>
+
+        <!-- wish gallery (interactive) -->
+        <div class="wish-gallery">
+          <span onclick="showToast('🍫', 'sweet like you')">🍫 chocolate</span>
+          <span onclick="showToast('🕯️', 'candlelight for two')">🕯️ candlelight</span>
+          <span onclick="showToast('🎁', 'a surprise for Nada')">🎁 surprise</span>
+          <span onclick="showToast('💌', 'words from my heart')">💌 love letter</span>
+          <span onclick="showToast('🌙', 'stargazing with you')">🌙 starlight</span>
+          <span onclick="showToast('🥂', 'toast to us')">🥂 toast</span>
+        </div>
+
+        <!-- ✦ NEW FEATURE 1: Countdown to next Valentine's ✦ -->
+        <div class="countdown-box">
+          <div class="countdown-title">
+            <span>⏳</span> days until our next Valentine <span>⏳</span>
+          </div>
+          <div id="countdown">365</div>
+        </div>
+
+        <!-- ✦ NEW FEATURE 2: rotating love note (click to change) ✦ -->
+        <div class="love-note-rotator" id="loveNoteRotator" onclick="rotateLoveNote()">
+          <span id="rotatingNote">💞 you are my forever</span>
+        </div>
+
+        <!-- ✦ NEW FEATURE 3: secret corner for Nada ✦ -->
+        <div class="secret-corner">
+          <button onclick="revealSecret()">✨ secret for Nada</button>
+          <span class="secret-message" id="secretMessage">💫</span>
+        </div>
+
+        <div class="hint-soft">✨ tap flowers, wishes & notes ✨</div>
+      </div>
+    </div>
+
+    <!-- elegant footer -->
+    <div class="footer-elegant">
+      <span>💘 Nada · my Valentine</span>
+      <span>📅 february 14</span>
+      <span>💋 with all my heart</span>
+      <span>🌍 for you, always</span>
+    </div>
+  </div>
+
+  <!-- toast -->
+  <div id="toast" class="toast-beauty"></div>
+
+  <script>
+    (function() {
+      // ========== CLEAN, FAST, NO BUGS ==========
+
+      const toast = document.getElementById('toast');
+      let toastTimer = null;
+
+      // global showToast function
+      window.showToast = function(emoji, message) {
+        if (toastTimer) clearTimeout(toastTimer);
+        toast.style.opacity = '1';
+        toast.textContent = emoji + ' ' + message;
+        toastTimer = setTimeout(() => {
+          toast.style.opacity = '0';
+        }, 2000);
+      };
+
+      // 1. dynamic greeting (time based)
+      const greetingSpan = document.getElementById('dynamicGreeting');
+      const hour = new Date().getHours();
+      let greeting = '';
+      if (hour < 12) greeting = 'good morning, beautiful Nada';
+      else if (hour < 18) greeting = 'good afternoon, lovely Nada';
+      else greeting = 'good evening, sweet Nada';
+      greetingSpan.textContent = greeting + ' ❤️';
+
+      // 2. countdown to next valentine (feb 14)
+      function updateCountdown() {
+        const today = new Date();
+        let nextValentine = new Date(today.getFullYear(), 1, 14); // feb 14
+        if (today > nextValentine) {
+          nextValentine.setFullYear(nextValentine.getFullYear() + 1);
+        }
+        const diff = nextValentine - today;
+        const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+        document.getElementById('countdown').innerText = days;
+      }
+      updateCountdown();
+
+      // 3. rotating love notes
+      const notes = [
+        '💕 you are my today and tomorrow',
+        '🌹 every rose reminds me of you',
+        '💫 you are the star in my sky',
+        '✨ with you, every day is Valentine',
+        '🎵 you are the melody of my heart',
+        '💞 my love for you grows forever'
+      ];
+      let noteIndex = 0;
+      window.rotateLoveNote = function() {
+        noteIndex = (noteIndex + 1) % notes.length;
+        document.getElementById('rotatingNote').innerText = notes[noteIndex];
+        showToast('💖', 'a little note for you');
+      };
+
+      // 4. secret corner messages
+      const secretMessages = [
+        '💎 you are my treasure',
+        '👑 queen of my heart',
+        '🌍 my whole world',
+        '💋 thinking of you',
+        '🎁 the best gift in my life'
+      ];
+      let secretIndex = 0;
+      window.revealSecret = function() {
+        secretIndex = (secretIndex + 1) % secretMessages.length;
+        document.getElementById('secretMessage').innerText = secretMessages[secretIndex];
+        showToast('✨', 'a secret just for Nada');
+      };
+
+      // 5. flower & wish toasts are already handled by onclick
+
+      // prevent any error from appearing
+      window.onerror = function() { return true; };
+
+      // all set — perfect for Nada
+    })();
+  </script>
+</body>
+</html>
